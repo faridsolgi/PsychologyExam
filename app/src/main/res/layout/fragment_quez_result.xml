@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primery_black"
+    android:layoutDirection="ltr"
+    tools:context=".view.QuezResultFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_background_quez_background"
+        android:paddingStart="4dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textview_Result_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yekan"
+            android:text="@string/end"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_Result_sendtv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/yekan"
+            android:text="@string/title_end"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_Result_end" />
+
+        <EditText
+            android:id="@+id/editText_Result_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_background_edittext"
+            android:fontFamily="@font/yekan"
+            android:hint="@string/FLName"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/textview_Result_sendtv" />
+
+        <EditText
+            android:id="@+id/editText_Result_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_background_edittext"
+            android:fontFamily="@font/yekan"
+            android:hint="@string/age"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="@+id/editText_Result_name"
+            app:layout_constraintStart_toStartOf="@+id/editText_Result_name"
+            app:layout_constraintTop_toBottomOf="@+id/editText_Result_name" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_result_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editText_Result_age">
+
+            <RadioButton
+                android:id="@+id/radioButton_result_sexMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yekan"
+                android:padding="4dp"
+                android:text="@string/man"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radioButton_result_sexWoman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yekan"
+                android:padding="4dp"
+                android:text="@string/Woman"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/editText_Result_education"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_background_edittext"
+            android:fontFamily="@font/yekan"
+            android:hint="@string/education"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="@+id/editText_Result_name"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editText_Result_name"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup_result_sex" />
+
+
+        <Button
+            android:id="@+id/button_result_buttonSendEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_background_button"
+            android:fontFamily="@font/yekan"
+            android:text="@string/send_result"
+            app:layout_constraintEnd_toEndOf="@+id/editText_Result_education"
+            app:layout_constraintStart_toStartOf="@+id/editText_Result_education"
+            app:layout_constraintTop_toBottomOf="@id/editText_Result_education" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
